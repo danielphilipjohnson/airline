@@ -1,0 +1,56 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  .feature {
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+
+    &__icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      background-color: #007bff;
+      color: #fff;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      color: #555;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    width: 100%;
+  }
+
+  .features {
+    .feature {
+      width: 90%;
+    }
+  }
+}
+
+
+https://www.figma.com/proto/c5dHvLyzO8tegV6i8mfRN2/Interview-Task?page-id=1%3A8&node-id=2-11&viewport=353%2C48%2C2.16&scaling=min-zoom&starting-point-node-id=2%3A11&show-proto-sidebar=1
