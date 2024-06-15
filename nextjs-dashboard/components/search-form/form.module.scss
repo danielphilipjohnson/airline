@@ -1,41 +1,117 @@
-.form__body {
-	display: flex;
-	flex-direction: column;
-  
-	&__group {
-	  margin-bottom: 1rem;
-	  text-align: left;
-  
-	  &__label {
-		display: block;
-		margin-bottom: 0.5rem;
-	  }
-  
-	  &__input {
-		width: 100%;
-		padding: 0.5rem;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-	  }
-  
-	  &__info {
-		margin-top: 0.5rem;
-		font-size: 0.875rem;
-		color: #555;
-	  }
-	}
-	&__submit{
-		padding: 0.75rem;
-		background-color: #007bff;
-		border: none;
-		color: #fff;
-		border-radius: 4px;
-		cursor: pointer;
-		font-size: 1rem;
-		font-weight: bold;
-  
-		&:hover {
-		  background-color: #0056b3;
-		}
-	}
+@import '@/styles/mixins';
+
+.form {
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__group {
+      text-align: left;
+      border: 1px solid #e6e9f0;
+      border-radius: 8px;
+      padding: 15px 13px;
+      margin-bottom: 9px;
+
+      @include breakpoint(tablet) {
+        width: 50%;
+        margin: 0 10px 0 0;
+
+        &--left {
+          margin: 0;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &--right {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          padding-left: 30px;
+        }
+      }
+
+      &__label {
+        display: block;
+        margin-bottom: 0;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $dark-grey;
+      }
+
+      &__input {
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $primary-blue;
+      }
+    }
+
+    &__submit {
+      padding: 0.75rem;
+      background-color: $primary-blue-light;
+      border: none;
+      color: $white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: center;
+
+      &:hover {
+        background-color: $primary-blue;
+      }
+
+      @include breakpoint(desktop) {
+        width: 169px;
+        height: 72px;
+      }
+    }
   }
+
+  &__row {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    @include breakpoint(desktop) {
+      width: 50%;
+    }
+  }
+}
+
+.swap-icon__container {
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+
+  position: absolute;
+  background: $white;
+  border: 1px solid #e6e9f0;
+  border-radius: 16px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-88%, -52%);
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.swap-icon {
+  width: 16px;
+  height: 16px;
+}

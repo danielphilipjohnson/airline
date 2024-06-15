@@ -1,0 +1,21 @@
+@import '@/styles/mixins';
+
+html,
+body {
+  height: 100%; // Ensures the body takes up the full height of the viewport
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; // Prevents horizontal scrolling
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  padding-left: 32px;
+  padding-right: 32px;
+  @include breakpoint(desktop) {
+    max-width: 1024px;
+    margin: 0 auto 0 auto;
+  }
+}

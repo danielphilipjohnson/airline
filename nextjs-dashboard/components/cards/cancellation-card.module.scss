@@ -1,0 +1,221 @@
+/* CancellationCard.module.css */
+
+@import '@/styles/mixins';
+
+.cardContainer {
+  background-color: $light-grey;
+  padding: 28px 34px;
+  @include breakpoint(desktop) {
+    padding: 37px 161px 53px 161px;
+    
+  }
+}
+
+.cardWrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 19px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10px;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 52px;
+  }
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-height: 400px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+.recommendationBadge {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  background: #10b981;
+  color: $white;
+  margin-bottom: 2rem;
+  padding: 7px 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  @include breakpoint(tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    padding: 8px 23px;
+  }
+}
+
+.cardHeading {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  max-width: 210px;
+
+  margin: 0 auto 1rem auto;
+  color: $primary-blue;
+  @include breakpoint(tablet) {
+    max-width: max-content;
+  }
+
+  @include breakpoint(desktop) {
+    text-align: left;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.cardText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  max-width: 240px;
+  color: $dark-grey;
+  margin: 0 auto 2.5rem auto;
+  @include breakpoint(tablet) {
+    max-width: 650px;
+  }
+
+  @include breakpoint(desktop) {
+    text-align: left;
+  }
+}
+
+.featureList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 0 40px;
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0;
+
+    // !DEBUIG
+
+    padding-top: 13px;
+  }
+}
+
+.featureItem {
+  background: $light-grey;
+  padding: 21px 10px 17px 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(tablet) {
+    padding: 21px 60px 17px 60px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 18px 18px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: #393939;
+  }
+
+  svg {
+    margin-bottom: 6px;
+  }
+}
+
+.illnessFeature svg {
+  width: 27.75px;
+  height: 20px;
+}
+
+.refundableFeature {
+  padding: 9px 10px 12px 10px;
+  span {
+    @include breakpoint(tablet) {
+      max-width: 100px;
+      line-height: 1.25;
+    }
+  }
+  @include breakpoint(tablet) {
+    order: 4;
+  }
+}
+
+.emergencyFeature {
+  padding: 0 10px 3px 10px;
+  @include breakpoint(tablet) {
+    order: 3;
+  }
+}
+
+.mechanicalFeature {
+  @include breakpoint(tablet) {
+    order: 5;
+  }
+}
+.moreFeatures {
+  @include breakpoint(tablet) {
+    order: 6;
+  }
+}
+
+.mechanicalFeature,
+.moreFeatures {
+  padding: 5px 10px 3px 10px;
+  height: 82px;
+
+  span {
+    @include breakpoint(tablet) {
+      max-width: 100px;
+      line-height: 1.25;
+    }
+  }
+}
+
+.cardLeft {
+  display: flex;
+  @include breakpoint(desktop) {
+    padding-left: 91px;
+    width: 50%;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cardRight {
+  @include breakpoint(desktop) {
+    padding: 65px 60px 50px 157px;
+  }
+}
+
+.mobilePhone {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+    padding-top: 40px;
+    width: auto;
+    height: 600px;
+  }
+}

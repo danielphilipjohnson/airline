@@ -1,0 +1,87 @@
+// Navigation.module.scss
+@import '@/styles/mixins';
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 30px;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @include breakpoint(tablet) {
+    padding: 38px 30px;
+  }
+  @include breakpoint(desktop) {
+    padding: 26px 30px;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+
+    &-list {
+      display: none;
+      @include breakpoint(desktop) {
+        display: flex;
+      }
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      color: $dark-grey;
+      list-style: none;
+      padding: 0;
+      margin: 0 1rem;
+
+      &-item {
+        margin-right: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint(desktop) {
+          padding-bottom: 8px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        span {
+          padding-right: 5px;
+          padding-top: 1px;
+        }
+
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  &__left {
+    .nav__logo {
+      margin-right: 23px;
+      height: auto;
+      width: 105px;
+
+      @include breakpoint(desktop) {
+        width: 133px;
+      }
+    }
+  }
+
+  &__menu-icon {
+    width: 25px;
+    height: 25px;
+    color: $primary-blue-light;
+    display: block;
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+}

@@ -19,7 +19,9 @@
     "postcss": "8.4.31",
     "react": "19.0.0-rc-6230622a1a-20240610",
     "react-dom": "19.0.0-rc-6230622a1a-20240610",
+    "react-slick": "^0.30.2",
     "reset-css": "^5.0.2",
+    "slick-carousel": "^1.8.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
     "zod": "^3.22.2"
